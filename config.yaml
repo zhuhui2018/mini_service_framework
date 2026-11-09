@@ -1,0 +1,26 @@
+# -*-coding:UTF-8 -*-
+# author: 阿黄  time:2019/10/22
+
+upstream_name: PytestTask
+branches:
+  - condition:
+      failed: ">0"
+    downstream_class: PytestTask
+    downstream_name: failed_retry
+    extra_params:
+      test_dir: /Users/huangjunlin/Documents/python/mini_service_framework/zhuhui
+  - condition:
+      failed: "==0"
+    downstream_class: ReportTask
+    downstream_name: generate_report
+
+tasks:
+  - name: PytestTask
+    type: PytestTask
+    params:
+      test_dir: /Users/huangjunlin/Documents/python/mini_service_framework/zhuhui
+
+triggers:
+  - name: PytestTask
+    type: interval
+    interval: 5

@@ -1,0 +1,21 @@
+# 虚拟环境（21M，绝对不能提交）
+.venv/
+venv/
+
+# Python 运行时产物
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# 运行框架时产生的归档和报告
+zhuhui/archive_dir/
+zhuhui/report*.json
+*.log
+
+# 编辑器与系统
+.idea/
+.vscode/
+.DS_Store
