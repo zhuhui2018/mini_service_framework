@@ -13,8 +13,7 @@ main.py              入口层    装配对象、启动、等待结束
 │   ├── support/     支撑层    校验器 / 分支定义 / 去重 / 规则（无状态小工具）
 │   └── plugins/     插件层    pytest 结果收集器（靠 hook 被调用）
 ├── config.yaml      配置层    路径、间隔等可变量（横切各层）
-├── tests/           用例层    框架自身的单元测试（62 条）
-└── legacy/          历史文件  YAML 版 main、TaskFactory 草稿、Queue 实验（不参与运行）
+└── tests/           用例层    框架自身的单元测试（62 条）
 ```
 
 三条依赖规则：

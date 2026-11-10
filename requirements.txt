@@ -8,5 +8,5 @@ croniter>=1.3
 # 说明：
 # 1. pytest 同时是"运行依赖"和"测试依赖"——因为框架里的 PytestTask
 #    就是调用 pytest.main() 跑用例的，不是只在开发时才用。
-# 2. PyYAML 目前只有 legacy/main_back.py 在用（YAML 驱动 main 那版还没完成，
-#    对应你清单里的第 7 项）。等第 7 项做完，它才真正是运行依赖。
+# 2. PyYAML 目前框架里还没有代码在读（config.yaml 的解析是清单第 7 项，
+#    还没做）。留着是给那一项准备的，现在删了也不影响运行。
