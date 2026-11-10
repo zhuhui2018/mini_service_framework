@@ -17,7 +17,7 @@ main.py              入口层    装配对象、启动、等待结束
 └── legacy/          历史文件  YAML 版 main、TaskFactory 草稿、Queue 实验（不参与运行）
 ```
 
-三条依赖规则（面试被问分层就说这三条）：
+三条依赖规则：
 
 1. `core/` 不认识任何具体任务，只认识"有 name 和 run() 的对象"——所以加任务不用改它。
 2. `tasks/` 不认识 `service`，只依赖 `core` 的接口。
